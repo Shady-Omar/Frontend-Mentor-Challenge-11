@@ -1,0 +1,225 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+}
+
+
+.container {
+    width: 725px;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: white;
+    box-shadow: 13px 13px 20px 0px hsl(212deg 23% 69% / 90%);
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 0px;
+}
+
+.container img {
+    width: 20rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.container .content .text {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.container .content .text h2 {
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 0px;
+}
+
+.container .content .text p {
+    font-size: 13px;
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+}
+
+.container .content .author {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1.9rem;
+    margin-bottom: -31px;
+}
+
+.container .content .author .pfp {
+    display: flex;
+}
+
+.container .content .author .pfp img {
+    border-radius: 50%;
+    width: 2.3rem;
+    cursor: pointer;
+}
+
+.container .content .author .pfp span {
+    font-weight: 700;
+    font-size: 13.3px;
+    color: hsl(217, 19%, 35%);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.container .content .author .pfp span::after {
+    content: '28 Jun 2020';
+    font-size: 13px;
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.container .content .author .share {
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translate(2px, 4px);
+}
+
+.container .content .author .share #share {
+    transform: translate(9px, 5px);
+}
+
+.social {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(212, 23%, 69%);
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-between;
+    padding: 1rem 1.8rem;
+    transform: translate(15.2rem, -4.7rem);
+    border-radius: 10px;
+    align-items: center;
+    position: relative;
+    opacity: 95%;
+    box-shadow: 13px 13px 20px 0px hsl(212deg 23% 69% / 70%);
+}
+
+.social::after {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    position: absolute;
+    top: 98%;
+    left: 98.795px;
+}
+
+.social span {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+.social svg {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .container .content {
+        width: 320px;
+        max-height: 293.5px;
+    }
+
+    .container .content .text {
+        margin-left: 25px;
+        width: 88%;
+    }
+
+    .container .content .text h2 {
+        font-size: 17px;
+    }
+
+    .container .content .text p {
+        font-size: 85%;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .container .content .author {
+        margin: 20px 1.9rem;
+        
+    }
+
+    .container .content .author .share {
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        transform: translate(2px, 9px);
+    }
+
+    .container .content .author .share #share {
+        transform: translate(8px, 4px);
+    }
+
+    .social {
+        transform: translate(0rem, -4.23rem);
+        opacity: 100%;
+        width: 320px;
+        padding: 1.5rem 0rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: none;
+    }
+
+    .social::after {
+        display: none;
+    }
+
+    .social span {
+        margin-right: 10px;
+        margin-left: 25px;
+    }
+
+    .social svg {
+        margin: 0 3%;
+    }
+
+    .hide {
+        display: none;
+    }
+}
